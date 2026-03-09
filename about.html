@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Heaven’s Pantry</title>
+        <meta charset="UTF-8">
+
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            body{
+                margin:0;
+            }
+            section img{
+                float: right;
+                width: 500px;
+                height: 400px;
+                margin: 30px;
+                margin-right: 50px;
+                border: 3px solid #ac7f5e;
+                border-radius: 27px;
+                box-shadow: 3px 3px 4px 3px rgba(0,0,0,0.25);
+            }
+            h2{
+                margin: 30px;
+            }
+            .content p{
+                font-size: 20px;
+                line-height: 30px;
+                margin: 30px;
+                text-align: justify;
+            }
+            .mission{
+                background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("images/building.jpg");
+                background-size: cover;
+                background-color: rgb(65, 65, 65);
+                padding: 90px 90px 90px;
+                margin-top: 100px;
+                margin-bottom: 60px;
+            }
+            .statement{
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 12px;
+            padding:50px 50px;
+            box-shadow: 0 3px 4px 2px rgba(0,0,0,0.25);
+            font-size: 25px;
+            line-height: 35px;
+            text-align: center;
+            }
+            .values h2 ~ h2 {
+                font-size: x-large;
+                display: inline-block;
+                border-radius: 12px;
+                padding:50px 30px 70px;
+                box-shadow: 3px 3px 4px 3px rgba(0,0,0,0.25);
+                font-size: 25px;
+                line-height: 35px;
+            }
+            .numbers{
+                display: flex;
+                justify-content: center;
+                gap: 80px;
+                margin-top: 40px;                flex-wrap: wrap;
+            }
+            hr {
+                width: 25%;
+            }
+            .stat{
+                text-align: center;
+                width: 260px;
+            }
+            .stat h2{
+                font-size: 50px;
+                font-weight: bold;
+            }
+            .stat p{
+                color:#ac7f5e;
+                font-size: 25px;
+            }
+            .card{
+                text-align: justify;
+                border: 1px solid #787878 20%;
+                border-radius: 12px;
+                margin: 70px 180px;
+                padding: 30px 60px;
+                box-shadow: 0 3px 4px 2px rgba(0,0,0,0.25);
+                border: 2px solid #DCC179;
+            }
+            .name{
+                text-align: center;
+                font-size: 20px;
+                margin:0;
+                letter-spacing: 1px;
+            }
+            .story{
+                font-size: 20px;
+                line-height: 27px;
+                margin-top: 10px;
+            }
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            .form input {
+                display: block;
+                margin-bottom: 20px;
+            }
+            .form textarea{
+                display: block;
+                color: gray;
+                font-family: Arial, sans-serif;
+                width: 90%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html">
+            <img src="images/logo.png" alt="Heaven's Pantry Logo" style="width:80px; height: 70px;">
+            </a>
+            <div style="float: right">
+            <nav class="nav-link">
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="getinvolved.html">Get Involved</a>
+            <a href="contact.html">Contact Us</a>
+            </nav>
+            </div>
+            <h1 class="header" style="font-size:60px;">About Us<h1>
+        </header>
+
+        <section class="about">
+            <img src="images/aboutus.JPG">
+
+            <div class="content">
+            <h2>Rooted in Faith. <br> Driven by Service.</h2>
+            <p>
+                Heaven’s Pantry was founded by Pastor Jasmine Darby Stroman of the House of Praise 
+                Non-Denominational Church of Deliverance with a vision to share the love of God 
+                through service and compassion. What began as a faith-driven initiative has grown 
+                into a community-centered nonprofit dedicated to fighting hunger and providing 
+                nutritious food to families, seniors, and individuals in need. Beyond distributing 
+                groceries, we are committed to restoring dignity, strengthening families, and building 
+                a supportive community through continued service and faithful stewardship.
+            </p>
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="statement">
+            <h2>Our Mission</h2>
+            <p>
+                Heaven’s Pantry exists to share the love of God by serving with compassion, 
+                dignity, and faith. Through continued service and opportunities to give, volunteer, 
+                and connect, we strive to strengthen our community and uplift one another in love.
+            </p>
+            </div>
+        </section>
+
+        <section class="values" style="text-align: center; margin-top: 100px; margin-bottom: 120px;">
+            <h2>What we Value</h2>
+            <h2>Compassionate Service</h2>
+            <h2>Community & Unity</h2>
+            <h2>Stewardship & Integrity</h2>
+        </section>
+
+        <section class="stats">
+            <h2 style="text-align: center;">Compassion in Action</h2>
+            <div class="numbers">
+                <div class="stat">
+                    <h2>100+</h2>
+                    <hr>
+                    <p>Food Boxes Packaged</p>
+                </div>
+
+                <div class="stat">
+                    <h2>50+</h2>
+                    <hr>
+                    <p>Families Served</p>
+                </div>
+
+                <div class="stat">
+                    <h2>$2000+</h2>
+                    <hr>
+                    <p>Raised to Support Food Programs</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Might need JavaScript to implement caraousel-->
+        <!--arrows need absolute positioning
+        
+          .next {
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    top: 300px;
+  }
+
+  .prev {
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 300px;
+  }-->
+
+        <section class="testimonials">
+            <h2 style="margin-top: 80px; text-align: center;">Voices From Our Community</h2>
+            <div class="card">
+            <h4 class="name" id="name">Diane</h4>
+            <p class="story" id="story">
+                “I love how kind and genuine the people are at Heaven’s Pantry. The boxes they gave me lasted my family for more than 2 months. I am so thankful for them.”
+            </p>
+            </div>
+        </section>
+
+        <section>
+            <form class="form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe">
+
+            <label for="comments">Comments or Questions</label>
+            <textarea id="comments" name="comments" rows="10">Type response here</textarea>
+            </form>
+            <input class="button" type="submit" style="font-size:medium;font-weight:bolder; color: black; display: block; margin-top:30px ; margin-left: 41%; padding: 4px 30px;">
+
+        </section>
+    </body>
+</html>

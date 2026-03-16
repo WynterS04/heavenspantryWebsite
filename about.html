@@ -9,7 +9,7 @@
             body{
                 margin:0;
             }
-            section img{
+            .about img{
                 float: right;
                 width: 500px;
                 height: 400px;
@@ -47,14 +47,29 @@
             line-height: 35px;
             text-align: center;
             }
-            .values h2 ~ h2 {
-                font-size: x-large;
+            .values div {
                 display: inline-block;
                 border-radius: 12px;
-                padding:50px 30px 70px;
+                background-color: white;
+                padding:8px 10px;
                 box-shadow: 3px 3px 4px 3px rgba(0,0,0,0.25);
-                font-size: 25px;
+                margin: 40px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .values div:hover{
+                transform: translateY(-8px) scale(1.03);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.22);
+            }
+            .val h2{
+                font-size: 33px;
                 line-height: 35px;
+                margin-bottom: 8px;
+                margin-top: 8px;
+            }
+            .values div ~ div img {
+                margin-top: 0px;
+                width: 130px;
+                height: auto;
             }
             .numbers{
                 display: flex;
@@ -159,11 +174,25 @@
             </div>
         </section>
 
-        <section class="values" style="text-align: center; margin-top: 100px; margin-bottom: 120px;">
-            <h2>What we Value</h2>
-            <h2>Compassionate Service</h2>
-            <h2>Community & Unity</h2>
-            <h2>Stewardship & Integrity</h2>
+        <section class="values" style="text-align: center; margin-top: 95px; margin-bottom: 120px;">
+            <h2 style="font-size: 60px;">What we Value</h2>
+
+            <div class="val">
+            <h2>Compassionate <br> Service</h2>
+            <!--this svg > size than other svgs-->
+            <img src="icons/Trust.svg" alt="Compassion icon" style="width: 100px; height: auto;">
+            </div>
+
+            <div class="val">
+            <h2>Community & <br> Unity</h2>
+            <img src="icons/unity.svg" alt="Unity icon">
+            </div>
+
+            <div class="val">
+            <h2>Stewardship & <br> Integrity</h2>
+            <img src="icons/integrity.svg" alt="Integrity icon">
+            </div>
+
         </section>
 
         <section class="stats">
@@ -227,5 +256,37 @@
             <input class="button" type="submit" style="font-size:medium;font-weight:bolder; color: black; display: block; margin-top:30px ; margin-left: 41%; padding: 4px 30px;">
 
         </section>
+
+        <footer> 
+            <div class="footer-row">
+                <div class="footer-brand">
+                    <img src="images\logo.png" style="width:70px; height: 60px;">
+                    <section class="motto">
+                        <h4>Heaven's Pantry</h4>
+                        <p>Vision for the Future. <br>
+                        Hope on Every Shelf.</p>
+                    </section>
+                </div>
+
+            <section class="quicklinks">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="events.html">Events</a>
+                <a href="getinvolved.html">Get Involved</a>
+                <a href="contact.html">Contact Us</a>
+            </section>
+
+            <section class="contact" style="padding-right: 60px">
+                <h4>Contact</h4>
+                <p>(123)456-7891 <br>
+                    heavenspantry@gmail.com <br>
+                    123 Fullproof Ave <br>
+                    Somwhere, 12345</p>
+            </section>
+            </div>
+
+            
+            <p class="copyright">© 2026 Heaven’s Pantry. All rights reserved</p>
+        </footer>
     </body>
 </html>

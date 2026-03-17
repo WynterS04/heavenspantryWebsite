@@ -41,11 +41,13 @@
             .statement{
             background-color: rgba(255,255,255,0.8);
             border-radius: 12px;
-            padding:50px 50px;
+            padding:50px 30px;
             box-shadow: 0 3px 4px 2px rgba(0,0,0,0.25);
             font-size: 25px;
             line-height: 35px;
             text-align: center;
+            max-width: 750px;
+            margin-left: 50px;
             }
             .values div {
                 display: inline-block;
@@ -93,24 +95,57 @@
                 font-size: 25px;
             }
             .card{
-                text-align: justify;
+                text-align: center;
                 border: 1px solid #787878 20%;
-                border-radius: 12px;
-                margin: 70px 180px;
+                border-radius: 34px;
+                margin: 0px 180px 40px;
                 padding: 30px 60px;
                 box-shadow: 0 3px 4px 2px rgba(0,0,0,0.25);
                 border: 2px solid #DCC179;
+                max-width: 800px;
+                height: 300px;
+            }
+            .testimonial-wrap{
+                position: relative;
+                width: fit-content;
+                margin: 0 auto;
+            }
+            .testimonials h2{
+                margin-top: 80px; 
+                text-align: center; 
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+            .user-icon {
+                display: block;
+                width: 130px;
+                height: auto;
+                margin: 10px auto 20px;
+            }
+            .prev, .next{
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                width: 46px;
+                height: auto;
+                cursor: pointer;
+            }
+            .prev{
+                left: 60px;
+            }
+            .next{
+                right: 85px;
             }
             .name{
-                text-align: center;
-                font-size: 20px;
-                margin:0;
-                letter-spacing: 1px;
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 15px;
             }
             .story{
-                font-size: 20px;
-                line-height: 27px;
+                font-size: 25px;
+                line-height: 38px;
                 margin-top: 10px;
+                margin-bottom: 0px;
             }
             label {
                 display: block;
@@ -165,17 +200,17 @@
 
         <section class="mission">
             <div class="statement">
-            <h2>Our Mission</h2>
+            <h2 style="font-size: 55px; line-height: 50px; ">Our Mission</h2>
             <p>
                 Heaven’s Pantry exists to share the love of God by serving with compassion, 
                 dignity, and faith. Through continued service and opportunities to give, volunteer, 
-                and connect, we strive to strengthen our community and uplift one another in love.
+                and connect, we strive to <br>strengthen our community and uplift one another in love.
             </p>
             </div>
         </section>
 
         <section class="values" style="text-align: center; margin-top: 95px; margin-bottom: 120px;">
-            <h2 style="font-size: 60px;">What we Value</h2>
+            <h2 style="font-size: 55px;">What we Value</h2>
 
             <div class="val">
             <h2>Compassionate <br> Service</h2>
@@ -196,7 +231,7 @@
         </section>
 
         <section class="stats">
-            <h2 style="text-align: center;">Compassion in Action</h2>
+            <h2 style="text-align: center; font-size: 55px;">Compassion in Action</h2>
             <div class="numbers">
                 <div class="stat">
                     <h2>100+</h2>
@@ -219,33 +254,31 @@
         </section>
 
         <!--Might need JavaScript to implement caraousel-->
-        <!--arrows need absolute positioning
-        
-          .next {
-    font-size: 30px;
-    position: absolute;
-    right: 30px;
-    top: 300px;
-  }
-
-  .prev {
-    font-size: 30px;
-    position: absolute;
-    left: 30px;
-    top: 300px;
-  }-->
 
         <section class="testimonials">
-            <h2 style="margin-top: 80px; text-align: center;">Voices From Our Community</h2>
-            <div class="card">
-            <h4 class="name" id="name">Diane</h4>
-            <p class="story" id="story">
-                “I love how kind and genuine the people are at Heaven’s Pantry. The boxes they gave me lasted my family for more than 2 months. I am so thankful for them.”
-            </p>
+            <h2>Voices From Our Community</h2>
+
+            <div class="testimonial-wrap">
+                <img src="icons/left-arrow.svg" alt="previous" class="prev">
+
+                <div class="card">
+                    <img src="icons/user.svg" alt="user icon" class="user-icon">
+
+                    <div style="text-align: justify;">
+                        <p class="story" id="story">
+                         “I love how kind and genuine the people at Heaven’s Pantry are.
+                         The boxes they gave me lasted my family for more than 2 months.
+                         I am so thankful for them.”
+                        </p>
+                        <p class="name">~ Diane</p>
+                    </div>
+                </div>
+                <img src="icons/right-arrow.svg" alt="next" class="next">
             </div>
         </section>
 
         <section>
+            <h2 style="margin-top: 80px; text-align: left; font-size: 40px;">Share Your Testimony</h2>
             <form class="form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="John Doe">

@@ -1,93 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Heaven's Pantry</title>
-    <meta charset="UTF-8">
+    <head>
+        <title>Heaven's Pantry</title>
+        <meta charset="UTF-8">
 
-    <!-- REQUIRED for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            p {
+                font-weight: normal;
+            }
+             .form input{
+                border-width: 1px;
+                border-radius: 7px;
+            }
+            body{
+                margin: 0;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            input {
+                display: block;
+                margin-bottom: 10px;
+            }
+            textarea{
+                display: block;
+                color: gray;
+                font-family: Arial, sans-serif;
+                width: 90%;
+            }
+            
+        </style>
 
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    </head>
 
-<body>
-
-<header class="header-container">
-    <div class="nav-bar">
-        <a href="index.html">
-            <img src="images/logo.png" alt="Logo" class="logo">
-        </a>
-
-        <nav class="nav-link">
-            <a href="about.html">About</a>
+    <body>
+        <header>
+            <a href="index.html">
+            <img src="images/logo.png" alt="Heaven's Pantry Logo" style="width:80px; height: 70px;">
+            </a>
+            <div style="float: right">
+            <nav class="nav-link">
+            <a href="about.html">About Us</a>
             <a href="events.html">Events</a>
             <a href="getinvolved.html">Get Involved</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-
-    <h1 class="header-title">Contact Us</h1>
-</header>
-
-<!-- CONTACT INFO -->
-<section class="contact-info">
-    <h3>Get In Touch</h3>
-
-    <div class="contact-cards">
-        <p>(123) 456-7891</p>
-        <p>heavenspantry@gmail.com</p>
-    </div>
-</section>
-
-<!-- FORM -->
-<section class="form-section">
-    <h3>Contact Us</h3>
-
-    <form class="form">
-        <label>Name</label>
-        <input type="text" placeholder="John Doe">
-
-        <label>Phone</label>
-        <input type="text" placeholder="(999) 999-9999">
-
-        <label>Email</label>
-        <input type="email" placeholder="username@example.com">
-
-        <label>Comments or Questions</label>
-        <textarea rows="6" placeholder="Type your message..."></textarea>
-
-        <button class="button">Submit</button>
-    </form>
-</section>
-
-<footer>
-    <div class="footer-row">
-        <div class="footer-brand">
-            <div>
-                <h4>Heaven's Pantry</h4>
-                <p>Hope on Every Shelf.</p>
+            <a href="contact.html">Contact Us</a>
+            </nav>
             </div>
-        </div>
+            <h1 class="topbanner" style="font-size:60px;">Contact Us<h1>
+        </header>
+        
+        <section class="getInTouch" style="text-align: center;">
+            <h3 style="font-weight: lighter; font-size: x-large;">Get In Touch</h3>
+            <p id="phone">(123) 456-7891</p>
+            <p id="email">heavenspantry@gmail.com</p>
+        </section>
 
-        <div class="quicklinks">
-            <h4>Quick Links</h4>
-            <a href="about.html">About</a>
-            <a href="events.html">Events</a>
-            <a href="getinvolved.html">Get Involved</a>
-            <a href="contact.html">Contact</a>
-        </div>
+        <h3 style="text-decoration: underline; font-weight: lighter; margin-left: 30px">Contact Us</h3>
+        <form class="form">
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe">
 
-        <div class="contact">
-            <h4>Contact</h4>
-            <p>(123) 456-7891<br>
-               heavenspantry@gmail.com<br>
-               123 Fullproof Ave<br>
-               Somewhere, 12345</p>
-        </div>
-    </div>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="(999)999-9999">
 
-    <p class="copyright">© 2026 Heaven’s Pantry</p>
-</footer>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="username@example.com">
 
-</body>
+            <label for="comments">Comments or Questions</label>
+            <textarea id="comments" name="comments" rows="10">Type response here</textarea>
+        </form> 
+            <input class="button" type="submit" style="font-size:medium;font-weight:bolder; color: black; display: block; margin-top:30px ; margin-left: 41%; padding: 4px 30px;">
+
+        <footer> 
+            <div class="footer-row">
+                <div class="footer-brand">
+                    <img src="images\logo.png" style="width:70px; height: 60px;">
+                    <section class="motto">
+                        <h4>Heaven's Pantry</h4>
+                        <p>Vision for the Future. <br>
+                        Hope on Every Shelf.</p>
+                    </section>
+                </div>
+
+            <section class="quicklinks">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="events.html">Events</a>
+                <a href="getinvolved.html">Get Involved</a>
+                <a href="contact.html">Contact Us</a>
+            </section>
+
+            <section class="contact" style="padding-right: 60px">
+                <h4>Contact</h4>
+                <p>(123)456-7891 <br>
+                    heavenspantry@gmail.com <br>
+                    123 Fullproof Ave <br>
+                    Somwhere, 12345</p>
+            </section>
+            </div>
+
+            
+            <p class="copyright">© 2026 Heaven’s Pantry. All rights reserved</p>
+        </footer>
+    </body>
 </html>

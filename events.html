@@ -6,12 +6,44 @@
 
         <link href="css/style.css" rel="stylesheet">
         <style>
+            body{
+                margin:0;
+            }
             .serve{
                 display: grid;
-                grid-template-columns: auto auto auto auto;
-
-                justify-content: stretch;
+                grid-template-columns: 25% 25% 25% 25%;
+            }
+            .serve img{
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                display:block;
                 border: 3px solid #ac7f5e;
+                box-sizing: border-box;
+                box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.25);
+            }
+            .intro{
+                text-align: center;
+                background: 
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+            }
+            .gradient-text {
+                font-size: 90px;
+                font-weight: 400;
+                margin: 0px;
+
+                background: radial-gradient(
+                    circle,
+                    #FFFACC 0%,
+                    #956624 5%,
+                    #956624 100%
+                );
+
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                background-clip: text;
+                color: transparent;
             }
         </style>
     </head>
@@ -30,22 +62,29 @@
             <a href="contact.html">Contact Us</a>
             </nav>
             </div>
-            <h1 class="topbanner" style="font-size:60px;">About Us<h1>
+            <h1 class="header" style="font-size:60px;">Events</h1>
         </header>
 
         <section>
             <div class="serve">
                 <img src="images/1.JPG" alt="volunteers helping at event">
-                <img src="images/2.JPG" alt="volunteers helping at event">
+                <img src="images/2.jpg" alt="volunteers helping at event">
                 <img src="images/3.JPG" alt="volunteers helping at event">
                 <img src="images/4.JPG" alt="volunteers helping at event">
             </div>
 
-            <div>
-
+            <div class="intro">
+                <h1 class="gradient-text" style="padding: 40px 0px 30px">
+                    Serving With Faith
+                </h1>
+                <p style="font-size: 26px; line-height: 40px; margin: 0px; padding: 5px 0px 50px;">
+                    Join us for upcoming events as we come 
+                    together to <br> nourish families and uplift 
+                    our community.
+                </p>
             </div>
 
-            <div class="serve">
+            <div class="serve" style="margin-bottom: 50px;">
                 <img src="images/5.JPG" alt="volunteers helping at event">
                 <img src="images/6.JPG" alt="volunteers helping at event">
                 <img src="images/7.JPG" alt="volunteers helping at event">
@@ -53,5 +92,11 @@
             </div>
         </section>
 
+        <h2 style="margin: 0px 0px 40px 50px;">Upcoming Events</h2>
+        <section class="timeline">
+            <span>
+                
+            </span>
+        </section>
     </body>
 </html>

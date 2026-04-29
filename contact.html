@@ -30,6 +30,7 @@
                 color: gray;
                 font-family: Arial, sans-serif;
                 width: 90%;
+                padding: 7px;
             }
             
         </style>
@@ -39,7 +40,7 @@
     <body>
         <header>
             <a href="index.html">
-            <img src="images/logo.png" alt="Heaven's Pantry Logo" style="width:80px; height: 70px;">
+            <img src="images/logo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 70px;">
             </a>
             <div style="float: right">
             <nav class="nav-link">
@@ -49,7 +50,7 @@
             <a href="contact.html">Contact Us</a>
             </nav>
             </div>
-            <h1 class="topbanner" style="font-size:60px;">Contact Us<h1>
+            <h1 class="header" style="font-size:60px;">Contact Us<h1>
         </header>
         
         <section class="getInTouch" style="text-align: center;">
@@ -61,7 +62,7 @@
         <h3 style="text-decoration: underline; font-weight: lighter; margin-left: 30px">Contact Us</h3>
         <form class="form">
             
-            <label for="name">Name</label>
+            <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="John Doe">
 
             <label for="phone">Phone</label>
@@ -71,9 +72,10 @@
             <input type="email" id="email" name="email" placeholder="username@example.com">
 
             <label for="comments">Comments or Questions</label>
-            <textarea id="comments" name="comments" rows="10">Type response here</textarea>
+            <textarea id="comments" name="comments" rows="10" placeholder="Type response here" style="color: black;"></textarea>
+
+            <input class="button" type="submit" style="font-size:medium;font-weight:bolder; color: black; display: block; margin-top:30px ; margin-left: 41%; padding: 4px 30px; width:auto;">
         </form> 
-            <input class="button" type="submit" style="font-size:medium;font-weight:bolder; color: black; display: block; margin-top:30px ; margin-left: 41%; padding: 4px 30px;">
 
         <footer> 
             <div class="footer-row">

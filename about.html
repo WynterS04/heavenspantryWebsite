@@ -43,10 +43,10 @@
             border-radius: 12px;
             padding:50px 30px;
             box-shadow: 0 3px 4px 2px rgba(0,0,0,0.25);
-            font-size: 27px;
-            line-height: 39px;
+            font-size: 25px;
+            line-height: 40px;
             text-align: center;
-            max-width: 800px;
+            max-width: 750px;
             margin-left: 50px;
             }
             .values div {
@@ -136,6 +136,20 @@
             .next{
                 right: 85px;
             }
+            .slide-left {
+                animation: slideLeft 0.5s ease;
+            }
+            .slide-right {
+                animation: slideRight 0.5s ease;
+            }
+            @keyframes slideLeft {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(-40px); opacity: 0; }
+            }
+            @keyframes slideRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(40px); opacity: 0; }
+            }
             .name{
                 font-size: 25px;
                 font-weight: bold;
@@ -151,16 +165,19 @@
                 display: block;
                 margin-bottom: 10px;
                 font-weight: bold;
+                margin-top: 15px;
+                
             }
-            .form input {
+            .form .button {
+                width: auto;
                 display: block;
-                margin-bottom: 20px;
+                margin: 30px auto 50px;
+                padding: 10px 30px;
             }
             .form textarea{
                 display: block;
-                color: gray;
-                font-family: Arial, sans-serif;
                 width: 90%;
+                padding: 7px;
             }
         </style>
     </head>
@@ -168,7 +185,7 @@
     <body>
         <header>
             <a href="index.html">
-            <img src="images/logo.png" alt="Heaven's Pantry Logo" style="width:80px; height: 70px;">
+            <img src="images/logo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 70px;">
             </a>
             <div style="float: right">
             <nav class="nav-link">
@@ -178,7 +195,7 @@
             <a href="contact.html">Contact Us</a>
             </nav>
             </div>
-            <h1 class="topbanner" style="font-size:60px;">About Us<h1>
+            <h1 class="header" style="font-size:60px;">About Us<h1>
         </header>
 
         <section class="about">
@@ -201,10 +218,10 @@
         <section class="mission">
             <div class="statement">
             <h2 style="font-size: 55px; line-height: 50px; ">Our Mission</h2>
-            <p style="margin-left: 20px; margin-right: 10px; text-align: justify;">
+            <p>
                 Heaven’s Pantry exists to share the love of God by serving with compassion, 
                 dignity, and faith. Through continued service and opportunities to give, volunteer, 
-                and connect, we strive to strengthen our community and uplift one another in love.
+                and connect, we strive to <br>strengthen our community and uplift one another in love.
             </p>
             </div>
         </section>
@@ -253,8 +270,7 @@
             </div>
         </section>
 
-        <!--Might need JavaScript to implement caraousel-->
-
+        <!--Testimonial Carousel-->
         <section class="testimonials">
             <h2>Voices From Our Community</h2>
 
@@ -265,12 +281,8 @@
                     <img src="icons/user.svg" alt="user icon" class="user-icon">
 
                     <div style="text-align: justify;">
-                        <p class="story" id="story">
-                         “I love how kind and genuine the people at Heaven’s Pantry are.
-                         The boxes they gave me lasted my family for more than 2 months.
-                         I am so thankful for them.”
-                        </p>
-                        <p class="name">~ Diane</p>
+                        <p class="story" id="story"> </p>
+                        <p class="name" id="displayName"></p>
                     </div>
                 </div>
                 <img src="icons/right-arrow.svg" alt="next" class="next">
@@ -279,16 +291,20 @@
 
         <section>
             <h2 style="margin-top: 80px; text-align: left; font-size: 40px;">Share Your Testimony</h2>
-            <form class="form">
+            
+            <!--Testimonial form!-->
+            <form class="form" id="testimonialForm">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="John Doe">
 
-            <label for="comments">Comments or Questions</label>
-            <textarea id="comments" name="comments" rows="10">Type response here</textarea>
-            </form>
-            <input class="button" type="submit" style="font-size:medium;font-weight:bolder; color: black; display: block; margin-top:30px ; margin-left: 41%; padding: 4px 30px;">
+            <label for="comments">Testimony</label>
+            <textarea id="comments" name="comments" rows="10" placeholder="Type response here" style="font-family: Arial, Helvetica, sans-serif; color: black"></textarea>
+            
+            <input class="button" type="submit" value="Share" style="font-size:medium;font-weight:bolder; color: black; display: block; margin-top:30px ; margin-left: 41%; padding: 4px 30px;">
+        </form>
 
         </section>
+
 
         <footer> 
             <div class="footer-row">
@@ -321,5 +337,7 @@
             
             <p class="copyright">© 2026 Heaven’s Pantry. All rights reserved</p>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>

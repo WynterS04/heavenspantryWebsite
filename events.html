@@ -45,6 +45,111 @@
                 background-clip: text;
                 color: transparent;
             }
+            .timeline {
+                position: relative;
+                margin: 50px 0 50px 70px; /* top right bottom left */
+                padding-left: 30px;
+                max-width: 950px;
+                text-align: justify;
+            }
+
+            /* Vertical line */
+            .timeline::before {
+                  content: "";
+                  position: absolute;
+                  left: 20px;
+                  top: 0;
+                  width: 1px;
+                  height: 100%;
+                  margin-left: 10px;
+                  background-color: #787878;
+            }
+
+            /* Each event */
+            .timeline-item {
+                  position: relative;
+            }
+
+            /* icons */
+            .timeline-icon {
+                  position: absolute;
+                  left: -35px;
+                  top: 43px;
+                  transform: translateX(-50%);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+            .timeline-icon img {
+                width: 25px;
+                height: auto;
+            }
+
+            /* Content box */
+            .timeline-content {
+                margin-left: 25px;
+            }
+            .timeline-content p{
+                line-height: 41px;
+                font-size: 18px;
+            }
+            .details img{
+                width: 25px;
+                height: auto;
+                margin: 0px;
+            }
+            .date, .location{
+                display: flex;
+                gap: 7px;
+            }
+            .event-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 40px;
+                padding: 15px 0px;
+            }
+
+            .event-text {
+                flex: 1;
+            }
+
+            .event-img {
+                width: 275px;
+                height: auto;
+                border: 1.7px solid #AC7F5E;
+                border-radius: 8px;
+            }
+            @media (max-width: 768px) {
+            .event-row {
+                flex-direction: column;
+            }
+
+            .event-img {
+                width: 50%;
+            }
+            }
+            .socials{
+                text-align: center;
+                border: 1px solid #787878 20%;
+                border-radius: 12px;
+                max-width: 600px;
+                margin: 120px auto;
+                padding: 40px 30px;
+                box-shadow: 0 3px 4px 2px rgba(0,0,0,0.25);
+            }
+            .socials img{
+                width: 38px;
+                height: auto;
+                padding-top: 15px;
+                padding-left: 35px;
+                margin-right: 40px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            }
+            .socials img:hover{
+                transform: translateY(-8px) scale(1.03);
+            }
         </style>
     </head>
 
@@ -52,7 +157,7 @@
 
         <header>
             <a href="index.html">
-            <img src="images/logo.png" alt="Heaven's Pantry Logo" style="width:80px; height: 70px;">
+            <img src="images/logo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 70px;">
             </a>
             <div style="float: right">
             <nav class="nav-link">
@@ -94,9 +199,164 @@
 
         <h2 style="margin: 0px 0px 40px 50px;">Upcoming Events</h2>
         <section class="timeline">
-            <span>
-                
-            </span>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <img src="icons/diamond.svg" alt="diamond">
+                </div>
+
+                <div class="timeline-content">
+
+                    <div class="event-row">
+
+                        <div class="event-text">
+                            <h2 style="font-size: 37px; margin-bottom: 10px; margin-top: 20px;">Harvest of Hope Drive</h2>
+
+                            <section class="details">
+                                <div class="location">
+                                    <img src="icons/calendar.svg">
+                                    <h4 style="margin: 7px 0px; font-size: 20px;">Saturday November 21, 2026</h4>
+                                </div>
+                                <div class="date">
+                                    <img src="icons/location.svg">
+                                    <h4 style="margin: 7px 0px; font-size: 20px;">Non-Denominational Church of Deliverance Fellowship Hall</h4>
+                                </div>
+                            </section>
+
+                            <p>
+                                Harvest of Hope is our annual fall outreach dedicated to ensuring families can gather 
+                                around a full table during the Thanksgiving season. Through generous food donations 
+                                and community support, we provide holiday meal boxes filled with nutritious 
+                                essentials to families in need. Join us in sharing gratitude by giving, volunteering, 
+                                or helping us distribute hope this season.
+                            </p>
+                        </div>
+
+                        <img src="images/event1.PNG" alt="event flyer" class="event-img">
+
+                    </div>
+
+                </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <img src="icons/diamond.svg" alt="diamond">
+                </div>
+
+                <div class="timeline-content">
+
+                    <div class="event-row">
+
+                        <div class="event-text">
+                            <h2 style="font-size: 37px; margin-bottom: 10px; margin-top: 20px;">Season of Giving Drive</h2>
+
+                            <section class="details">
+                                <div class="location">
+                                    <img src="icons/calendar.svg">
+                                    <h4 style="margin: 7px 0px; font-size: 20px;">Saturday December 19, 2026</h4>
+                                </div>
+                                <div class="date">
+                                    <img src="icons/location.svg">
+                                    <h4 style="margin: 7px 0px; font-size: 20px;">Non-Denominational Church of Deliverance Fellowship Hall</h4>
+                                </div>
+                            </section>
+
+                            <p>
+                                Season of Giving Drive is our winter outreach focused on bringing 
+                                nourishment and joy to families during the Christmas season. 
+                                In addition to our holiday food drive, we host a toy giveaway
+                                in conjunction with our outreach efforts, allowing community
+                                members to donate, drop off, or pick up toys for children in need. 
+                                Together, we provide both meals and meaningful moments that help make the 
+                                holidays brighter for local families.
+                            </p>
+                        </div>
+
+                        <img src="images/event2.jpg" alt="event flyer" class="event-img">
+
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <img src="icons/diamond.svg" alt="diamond">
+                </div>
+
+                <div class="timeline-content">
+
+                    <div class="event-row">
+
+                        <div class="event-text">
+                            <h2 style="font-size: 37px; margin-bottom: 10px; margin-top: 20px;">Toys for Tots Holiday Drive</h2>
+
+                            <section class="details">
+                                <div class="location">
+                                    <img src="icons/calendar.svg">
+                                    <h4 style="margin: 7px 0px; font-size: 20px;">Saturday December 19, 2026</h4>
+                                </div>
+                                <div class="date">
+                                    <img src="icons/location.svg">
+                                    <h4 style="margin: 7px 0px; font-size: 20px;">Non-Denominational Church of Deliverance Fellowship Hall</h4>
+                                </div>
+                            </section>
+
+                            <p>
+                                Our Toys for Tots Holiday Drive is dedicated to bringing joy to children in need 
+                                during the Christmas season. Through generous donations from our community, 
+                                we collect new toys and distribute them to local families to help make the 
+                                holidays brighter. By giving a toy, you’re not just donating a gift — 
+                                you’re sharing hope, love, and the spirit of the season.
+                            </p>
+                        </div>
+
+                        <img src="images/event3.jpg" alt="event flyer" class="event-img">
+
+                    </div>
+            </div>
         </section>
+
+        <section class="socials">
+            <p style="font-size: 24px; line-height: 40px;">
+                Stay connected and keep up with our latest events by following 
+                us on social media.
+            </p>
+
+            <a href="">
+            <img src="icons/insta.svg">
+            </a>
+            <img src="icons/facebook.svg">
+            <img src="icons/twitter.svg">
+        </section>
+
+        <footer> 
+            <div class="footer-row">
+                <div class="footer-brand">
+                    <img src="images\logo.png" style="width:70px; height: 60px;">
+                    <section class="motto">
+                        <h4>Heaven's Pantry</h4>
+                        <p>Vision for the Future. <br>
+                        Hope on Every Shelf.</p>
+                    </section>
+                </div>
+
+            <section class="quicklinks">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="events.html">Events</a>
+                <a href="getinvolved.html">Get Involved</a>
+                <a href="contact.html">Contact Us</a>
+            </section>
+
+            <section class="contact" style="padding-right: 60px">
+                <h4>Contact</h4>
+                <p>(123)456-7891 <br>
+                    heavenspantry@gmail.com <br>
+                    123 Fullproof Ave <br>
+                    Somwhere, 12345</p>
+            </section>
+            </div>
+
+            
+            <p class="copyright">© 2026 Heaven’s Pantry. All rights reserved</p>
+        </footer>
     </body>
 </html>

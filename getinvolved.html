@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Heaven's Pantry</title>
+        <meta charset="UTF-8">
+
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            body{
+                margin: 0;
+            }
+            .join-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 40px 80px;
+                gap: 60px;
+            }
+            .join-text {
+                max-width: 500px;
+                text-align: center;
+            }
+            .join-text h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .join-text p {
+                font-size: 20px;
+                line-height: 30px;
+                text-align: justify;
+            }
+            .volunteers {
+                position: relative;
+                width: 400px;
+                height: 400px;
+            }
+            .volunteers .img {
+                position: absolute;
+                width: 220px;
+                border-radius: 16px;
+                border: 3px solid #AC7F5E;
+            }
+            .top {
+                z-index: 3;
+                top: 0;
+                right: 0;
+            }
+
+            .middle {
+                z-index: 1;
+                top: 120px;
+                left: 0;
+            }
+
+            .bottom {
+                z-index: 2;
+                bottom: -30px;
+                right: 10px;
+            }
+            .btn {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #d2b56b;
+                color: black;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: large;
+            }
+            .btn:hover{
+                color:white !important;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                transform: translateY(-8px) scale(1.03);
+            }
+            @media (max-width: 768px) {
+                .join-container {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .volunteers {
+                    margin-top: 40px;
+                }
+            }
+            .seed{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+            .donate img{
+                width: 70px;
+                height: auto;
+                padding-bottom: 0;
+                padding-top: 20px;
+                margin-top: 25px;
+            }
+            .donate p {
+                max-width: 700px;      
+                margin: 0px auto 30px auto;     
+                text-align: center;   
+                font-size: 18px;
+                line-height: 40px;
+                text-align: justify;
+            }
+            .donations {
+                display: flex;
+                justify-content: center;
+                gap: 60px;
+                margin: 40px 0;
+            }
+            .donations section {
+                width: 400px;
+                border-radius: 12px;
+                background-color: white;
+                padding: 20px;
+                margin-bottom: 0px;
+                box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
+            }
+            .monetary, .food{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .items{
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                text-align: left;
+            }
+            .dropoff {
+                padding: 5px 80px 60px 80px;
+            }
+            .drop-title {
+                font-size: 40px;
+                color: #AC7F5E;
+                margin-bottom: 5px;
+            }
+            .drop-container {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 70px;
+            }
+            .drop-text h3 {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+            .map-link {
+                display: inline-block;
+                font-size: 20px;
+                color: #AC7F5E;
+                text-decoration: underline;
+                transition: 0.2s;
+            }
+            .map-link:hover {
+                color: purple; /* color change on hover */
+            }
+
+            .times {
+                font-size: 20px;
+                color: #AC7F5E;
+            }
+            .map-container {
+                position: relative;
+            }
+
+            .map-img {
+                width: 400px;
+                border-radius: 6px;
+            }
+            .directions-btn {
+                position: absolute;
+                top: 18px;
+                left: 200px;
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .directions-btn img {
+                width: 30px;
+            }
+            .directions-btn img:hover{
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                transform: translateY(-8px) scale(1.03);
+            }
+            @media (max-width: 768px) {
+                .drop-container {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .map-img {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <a href="index.html">
+            <img src="images/logo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 70px;">
+            </a>
+            <div style="float: right">
+            <nav class="nav-link">
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="getinvolved.html">Get Involved</a>
+            <a href="contact.html">Contact Us</a>
+            </nav>
+            </div>
+            <h1 class="header" style="font-size:60px;">Get Involved</h1>
+        </header>
+
+        <section class="join">
+            <div class="join-container">
+
+                <div class="join-text">
+                    <h2>Join Our Team</h2>
+                    <p>
+                        Join us in making a meaningful difference in our community. Volunteers play a vital 
+                        role in boxing food packages, distributing meals during outreach events, promoting 
+                        upcoming initiatives, assisting with event setup and cleanup, and so much more. 
+                    </p>
+                    <p>
+                        If you’re ready to serve and support Heaven’s Pantry’s mission, click the button 
+                        below and complete the form on our Contact Us page to let us know you’d like to 
+                        volunteer for an upcoming event.
+                    </p>
+
+                    <a href="https://forms.gle/g845gVuZDm65FbRA7" class="btn">Sign Up</a>
+                </div>
+
+                <div class="volunteers">
+                    <img src="images/join1.jpg" alt="picture of volunteer" class="img top">
+                    <img src="images/join2.jpg" alt="picture of volunteer" class="img middle">
+                    <img src="images/join3.jpg" alt="picture of volunteer" class="img bottom">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="donate">
+            <div class="seed">
+                <img src="icons/Sprout.svg">
+                <h2 style="margin-bottom: 20px;">Sow a Seed of Hope</h2>
+            </div>
+            <p>
+                Your generosity helps us provide nutritious food and essential resources 
+                to families facing food insecurity in our community. 
+                Every contribution, no matter the size, allows Heaven’s 
+                Pantry to continue serving with compassion, dignity, and care.
+            </p>
+        </section>
+
+        <div class="donations">
+            <section class="monetary">
+                <h2 style="text-align: center; margin: 10px;">Monetary</h2>
+                <ul style="line-height: 35px; font-size: large; margin-top: 10px;">
+                    <li>$10 helps provide fresh produce for a family</li>
+                    <li>$25 helps stock pantry essentials for one household</li>
+                    <li>$50 helps fill 2–3 food boxes for families in need</li>
+                    <li>$100 helps support a community food distribution event</li>
+                </ul>
+
+                <a href="getinvolved.html" class="btn">Donate Today</a>
+            </section>
+
+            <section class="food">
+                <h2 style="text-align: center; margin: 10px;">Food</h2>
+                <p style="font-size: large; margin: 10px 27px 5px 27px; line-height: 25px;">
+                    Here are some meaningful food items you can contribute at 
+                    our selected drop-off locations:
+                </p>
+                <div class="items">
+                    <ul style="line-height: 25px; font-size: larger;">
+                        <li>canned goods</li>
+                        <li>rice</li>
+                        <li>mashed potatoes</li>
+                        <li>pasta</li>
+                    </ul>
+                    <ul style="line-height: 25px; font-size: larger;">
+                        <li>cereal</li>
+                        <li>flour, sugar, etc.</li>
+                        <li>tuna</li>
+                        <li>other non-perishables</li>
+                    </ul>
+                </div>
+                
+                <a href="getinvolved.html" class="btn">Order Now</a>
+            </section>
+        </div>
+
+        <section class="dropoff">
+            <h2 class="drop-title">Drop-Off Details</h2>
+
+            <div class="drop-container">
+
+                <div class="drop-text">
+
+                    <h3 style="margin-top: 0px;">Location</h3>
+                    <a href="https://www.google.com/maps?q=1656+Joe+S+Jeffords+Hwy,+Orangeburg,+SC+29118"
+                    target="_blank"
+                    class="map-link">
+                        1656 Joe S Jeffords Hwy,<br>
+                        Orangeburg, SC 29118
+                    </a>
+
+                    <h3 style="margin-top:40px;">Times</h3>
+                    <p class="times">
+                        Monday–Friday<br>
+                        9:00 AM – 5:00 PM
+                    </p>
+
+                </div>
+
+                <div class="map-container">
+                    <img src="images/location.png" alt="map" class="map-img">
+
+                    <a href="https://www.google.com/maps?q=1656+Joe+S+Jeffords+Hwy,+Orangeburg,+SC+29118"
+                    target="_blank"
+                    class="directions-btn">
+                        <img src="icons/directions.svg" alt="directions">
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <footer> 
+            <div class="footer-row">
+                <div class="footer-brand">
+                    <img src="images\logo.png" style="width:70px; height: 60px;">
+                    <section class="motto">
+                        <h4>Heaven's Pantry</h4>
+                        <p style="line-height: 26px;">Vision for the Future. <br>
+                        Hope on Every Shelf.</p>
+                    </section>
+                </div>
+
+            <section class="quicklinks">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="events.html">Events</a>
+                <a href="getinvolved.html">Get Involved</a>
+                <a href="contact.html">Contact Us</a>
+            </section>
+
+            <section class="contact" style="padding-right: 60px;">
+                <h4>Contact</h4>
+                <p style="line-height: 23px;">(123) 456-7891 <br>
+                    heavenspantry@gmail.com <br>
+                    123 Fullproof Ave <br>
+                    Somwhere, 12345</p>
+            </section>
+            </div>
+
+            
+            <p class="copyright">© 2026 Heaven’s Pantry. All rights reserved</p>
+        </footer>
+    </body>
+</html>

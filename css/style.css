@@ -4,12 +4,6 @@
     --border-color: #ac7f5e;
 }
 
-/*----------To-Dos---------------*/
-
-/*Make responsive later*/
-/*Increase Header size*/
-/*Add icons & other images*/
-/*Change Welcome color gradient*/
 
 /*General*/
 a {
@@ -19,7 +13,8 @@ a {
 
 .button:hover{
     color:white !important;
-    border-style: outset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-8px) scale(1.03);
 }
 
 /*Website header*/
@@ -47,6 +42,15 @@ header .nav-link a:hover{
     padding: 30px 0;
     font-weight: lighter;
 }
+
+.logo{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;;
+}
+
+.logo:hover{
+    transform: translateY(-8px) scale(1.05);
+}
+
 
 /*Home Page*/
 
@@ -157,3 +161,7 @@ footer a:hover{
     color:purple;
     text-decoration: underline;
 }
+
+
+
+

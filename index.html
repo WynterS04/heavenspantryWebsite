@@ -9,6 +9,34 @@
           body{
             margin: 0;
           }
+          header {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.13), rgba(0,0,0,0.13)),
+            url("images/heaven-gates.png") no-repeat center center/cover;
+          }
+
+          /* overlay */
+          header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.35);
+            z-index: 1;
+          }
+          /*content sits aby overlay */
+          header h1,
+          header nav,
+          .logo {
+            position: relative;
+            z-index: 2;
+          }
+          .nav-link {
+            position: absolute;
+            top: 25px;
+            right: 40px;
+            z-index: 3;
+          }
           header h1{
             background: radial-gradient(
               circle at right,
@@ -18,8 +46,8 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 text-align: center;
-                font-size: 65px;
-                line-height: 1.1;
+                font-size: 80px;
+                line-height: 1.2;
                 font-weight: 700;
           }
           .whoweare, .joinus, .listevents{
@@ -159,9 +187,9 @@
   <body>
     <header>
       <a href="index.html">
-          <img src="images/logo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 70px;">
+          <img src="images/transparentlogo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 90px; position: relative; left: 18px;">
       </a>
-      <div style="float: right">
+      <div>
         <nav class="nav-link">
           <a href="about.html">About Us</a>
           <a href="events.html">Events</a>
@@ -170,7 +198,7 @@
         </nav>
       </div>
 
-      <h1>Welcome to <br> Heaven's <br> Pantry<h1>
+      <h1>Welcome to <br> Heaven's <br> Pantry</h1>
     </header>
 
     <section class="whoweare">

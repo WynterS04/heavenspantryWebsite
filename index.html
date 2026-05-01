@@ -9,37 +9,6 @@
           body{
             margin: 0;
           }
-          * {
-            box-sizing: border-box;
-          }
-          header {
-            position: relative;
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.13), rgba(0,0,0,0.13)),
-            url("images/heaven-gates.png") no-repeat center center/cover;
-          }
-
-          /* overlay */
-          header::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,0.35);
-            z-index: 1;
-          }
-          /*content sits aby overlay */
-          header h1,
-          header nav,
-          .logo {
-            position: relative;
-            z-index: 2;
-          }
-          .nav-link {
-            position: absolute;
-            top: 25px;
-            right: 40px;
-            z-index: 3;
-          }
           header h1{
             background: radial-gradient(
               circle at right,
@@ -49,15 +18,15 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 text-align: center;
-                font-size: 80px;
-                line-height: 1.2;
+                font-size: 65px;
+                line-height: 1.1;
                 font-weight: 700;
           }
           .whoweare, .joinus, .listevents{
             text-align: justify;
             border: 1px solid #787878 20%;
             border-radius: 4px;
-            margin: 120px 50px 90px 80px;
+            margin: 120px 50px 120px 80px;
             padding: 30px;
             box-shadow: 0 3px 4px 2px rgba(0,0,0,0.25);
           }
@@ -78,12 +47,12 @@
           }
           .image-wrap {
               position: relative;
-              width: 290px;
+              width: 320px;
           }
           .whoweare .bg-box {
               position: absolute;
               top: -25px;
-              left: -90px;
+              left: -120px;
               width: 110%;
               height: 110%;
               background-color: #DCC179;
@@ -93,7 +62,7 @@
           .joinus .bg-box {
               position: absolute;
               top: -30px;
-              right: -70px;
+              right: -80px;
               left: auto;
               width: 110%;
               height: 110%;
@@ -150,35 +119,19 @@
           .joinus {
               flex-direction: row-reverse;
           }
-        .carousel {
+          .carousel {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-top: 30px;
-            overflow: hidden;
-            position: relative;
         }
+
         .carousel-track {
             display: flex;
             align-items: center;
             gap: 25px;
-            max-width: 100%;
         }
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 28px;
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-        .arrow.left { 
-          left: 10px; 
-        }
-        .arrow.right { 
-          right: 10px; 
-        }
+
         .card {
             width: 160px;
             opacity: 0.6;
@@ -188,17 +141,17 @@
         }
 
         .card.active {
-            width: 200px;
+            width: 230px;
             opacity: 1;
             transform: scale(1);
         }
-/*       .arrow {
+        .arrow {
             font-size: 28px;
             border: none;
             background: none;
             cursor: pointer;
             padding: 10px;
-        }*/
+        }
 
         </style>
   </head>
@@ -206,9 +159,9 @@
   <body>
     <header>
       <a href="index.html">
-          <img src="images/transparentlogo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 90px; position: relative; left: 18px;">
+          <img src="images/logo.png" alt="Heaven's Pantry Logo" class="logo" style="width:80px; height: 70px;">
       </a>
-      <div>
+      <div style="float: right">
         <nav class="nav-link">
           <a href="about.html">About Us</a>
           <a href="events.html">Events</a>
@@ -217,7 +170,7 @@
         </nav>
       </div>
 
-      <h1>Welcome to <br> Heaven's <br> Pantry</h1>
+      <h1>Welcome to <br> Heaven's <br> Pantry<h1>
     </header>
 
     <section class="whoweare">
@@ -284,7 +237,7 @@
 
     <script>
     const events = [
-        "event1.PNG",
+        "event1.png",
         "event2.jpg",
         "event3.jpg",
     ];

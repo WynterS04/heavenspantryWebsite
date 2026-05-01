@@ -150,22 +150,35 @@
           .joinus {
               flex-direction: row-reverse;
           }
-          .carousel {
+        .carousel {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-top: 30px;
             overflow: hidden;
-            max-width: 100%;
+            position: relative;
         }
-
         .carousel-track {
             display: flex;
             align-items: center;
             gap: 25px;
             max-width: 100%;
         }
-
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 28px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .arrow.left { 
+          left: 10px; 
+        }
+        .arrow.right { 
+          right: 10px; 
+        }
         .card {
             width: 160px;
             opacity: 0.6;
@@ -179,13 +192,13 @@
             opacity: 1;
             transform: scale(1);
         }
-        .arrow {
+/*       .arrow {
             font-size: 28px;
             border: none;
             background: none;
             cursor: pointer;
             padding: 10px;
-        }
+        }*/
 
         </style>
   </head>
